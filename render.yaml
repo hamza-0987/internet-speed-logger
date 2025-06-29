@@ -1,10 +1,11 @@
 services:
-  - type: worker
-    name: internet-speed-logger
+  - type: cron
+    name: internet-speed-logger-cron
     runtime: python
     plan: free
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python internet_speed_logger.py"
+    schedule: "0 5 * * *"  # every day at 5 AM UTC
     envVars:
       - key: SUPABASE_URL
         sync: false
