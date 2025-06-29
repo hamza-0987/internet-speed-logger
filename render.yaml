@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: internet-speed-logger
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python internet_speed_logger.py"
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
