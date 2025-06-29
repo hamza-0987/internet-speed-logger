@@ -2,7 +2,7 @@ name: Internet Speed Logger
 
 on:
   schedule:
-    - cron: '10 13 * * *'  # Every day at 5 AM UTC
+    - cron: '15 13 * * *'  
   workflow_dispatch:  # Manual run if needed
 
 jobs:
